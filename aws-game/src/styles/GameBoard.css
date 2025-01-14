@@ -1,0 +1,92 @@
+.back-button {
+  background: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background: var(--hover-color);
+  transform: scale(1.05);
+}
+
+.info-button {
+  background-color: var(--teal-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.info-button:hover {
+  background-color: var(--teal-hover-color);
+  transform: scale(1.05);
+}
+
+.back-button:hover {
+  background: var(--hover-color);
+  transform: scale(1.05);
+}
+
+.gameboard-title {
+  font-size: 3rem; /* Make the font bigger */
+  font-weight: bold;
+  color: #ffffff; /* Use an accent color */
+  margin-bottom: 20px; /* Add some space below the title */
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.leaderboard-modal {
+  display: flex;
+  flex-direction: column; /* Allows stacking elements vertically */
+  justify-content: center; /* Centers contents vertically */
+  align-items: center; /* Centers contents horizontally */
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  max-height: 80%;
+  overflow-y: auto;
+  position: relative;
+}
+
+.close-modal-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #bf0d00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.close-modal-button:hover {
+  background-color: #d32f2f;
+}  

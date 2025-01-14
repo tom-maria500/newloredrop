@@ -1,0 +1,35 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-awsgame-staging-2d0e1-authRole",
+      "UnauthRoleArn": "arn:aws:iam::559050214398:role/amplify-awsgame-staging-2d0e1-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::559050214398:role/amplify-awsgame-staging-2d0e1-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-awsgame-staging-2d0e1-deployment",
+      "UnauthRoleName": "amplify-awsgame-staging-2d0e1-unauthRole",
+      "StackName": "amplify-awsgame-staging-2d0e1",
+      "StackId": "arn:aws:cloudformation:us-east-2:559050214398:stack/amplify-awsgame-staging-2d0e1/b451e410-cd78-11ef-9bf8-065adec88a5f",
+      "AmplifyAppId": "d2g64pp6ao7s8u"
+    },
+    "categories": {
+      "auth": {
+        "AWSGame": {}
+      },
+      "function": {
+        "S3Triggerdb8ffa6e": {
+          "deploymentBucketName": "amplify-awsgame-staging-2d0e1-deployment",
+          "s3Key": "amplify-builds/S3Triggerdb8ffa6e-783155736c514a386969-build.zip"
+        }
+      },
+      "storage": {
+        "s358bfb9cf": {}
+      },
+      "api": {
+        "awsgame": {}
+      },
+      "predictions": {
+        "transcription25103e7a": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+/* Container for the audio component */
+.audio-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--amplify-colors-neutral-100); /* Neutral background */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Header styling */
+.audio-container h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--amplify-colors-neutral-900);
+  margin-bottom: 15px;
+}
+
+/* Control buttons container */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Common button styles */
+.controls button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Record button styling */
+.record-button {
+  background-color: #ed2d2d;
+  color: white;
+}
+
+.record-button:hover {
+  background-color: #cb1d1d;
+  transform: scale(1.05);
+}
+
+/* Stop button styling */
+.stop-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.stop-button:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+/* Audio preview section */
+.audio-preview {
+  margin-top: 20px;
+}
+
+.audio-preview h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--amplify-colors-neutral-800);
+  margin-bottom: 10px;
+}
+
+.audio-preview audio {
+  width: 100%;
+  border: 1px solid var(--amplify-colors-neutral-300);
+  border-radius: 8px;
+  background-color: var(--amplify-colors-neutral-100);
+}
+
+/* Transcript container */
+.transcript-container {
+  margin-top: 20px;
+  background-color: var(--amplify-colors-neutral-200);
+  border-radius: 8px;
+  padding: 15px;
+  text-align: left;
+}
+
+.transcript-container h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.transcript-container p {
+  font-size: 16px;
+  color: var(--amplify-colors-neutral-800);
+  line-height: 1.5;
+}
+
+/* Status message */
+.status-message {
+  margin-top: 15px;
+  font-size: 14px;
+  color: var(--amplify-colors-neutral-700);
+  font-style: italic;
+}
+
+.submit-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #0a8cb4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #36aed3;
+  transform: scale(1.05);
+}

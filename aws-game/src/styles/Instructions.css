@@ -1,0 +1,46 @@
+.instructions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background: var(--amplify-colors-neutral-100);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.instructions-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.instructions-content {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--amplify-colors-neutral-800);
+}
+
+.instructions-content li {
+  margin-bottom: 15px;
+}
+
+.instructions-back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: var(--teal-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.instructions-back-button:hover {
+  background-color: var(--teal-hover-color);
+  transform: scale(1.05);
+}

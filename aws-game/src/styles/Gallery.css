@@ -1,0 +1,87 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80%;
+    overflow-y: auto;
+    position: relative;
+    text-align: center;
+  }
+  
+  .close-modal-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #bf0d00;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .close-modal-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  .drawing-image {
+    max-width: 100%;
+    max-height: 400px;
+    margin: auto;
+  }
+  
+  .gallery-title {
+    margin-bottom: 20px;
+    color: var(--accent-color);
+  }
+
+  /* Gallery Container */
+.drawings-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center align the drawings */
+  gap: 20px; /* Space between each drawing */
+}
+
+/* Individual Drawing Item */
+.drawing-item {
+  width: 200px; /* Fixed width for the drawing item */
+  height: 200px; /* Fixed height for the drawing item */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd; /* Light border around each drawing */
+  border-radius: 8px; /* Rounded corners for each drawing */
+  overflow: hidden; /* Ensure the image doesn't overflow the container */
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); /* Slight shadow effect */
+}
+
+/* Image Inside the Drawing Item */
+.drawing-item img {
+  width: 100%; /* Ensure the image fits the container width */
+  height: 100%; /* Ensure the image fits the container height */
+  object-fit: cover; /* Crop and fit the image within the container */
+  border-radius: 8px; /* Match the container's rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+}
+
+/* Hover Effect on Drawing */
+.drawing-item img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add a deeper shadow on hover */
+}

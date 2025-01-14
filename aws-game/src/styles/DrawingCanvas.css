@@ -1,0 +1,131 @@
+.drawing-canvas-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.canvas-controls {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 800px; /* Match canvas width */
+}
+
+.color-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.color-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.color-circle:hover {
+  transform: scale(1.1);
+}
+
+.control-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.control-button-clear {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f02424;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.control-button-clear:hover {
+  background-color: #ef6464;
+  transform: scale(1.05);
+}  
+
+.control-button-undo {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3287e7;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.control-button-:hover {
+  background-color: #69a6eb;
+  transform: scale(1.05);
+}  
+
+.control-button-submit {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.control-button-submit:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}  
+
+.alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.alert-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+.alert-box h3 {
+  margin: 0;
+  color: #4caf50;
+}
+
+.alert-box p {
+  margin: 10px 0;
+  color: #333;
+}
+
+.alert-close-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.alert-close-button:hover {
+  background-color: #45a049;
+}

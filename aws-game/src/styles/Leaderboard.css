@@ -1,0 +1,57 @@
+.leaderboard-container {
+  background-color: var(--secondary-color); /* Matches the secondary color */
+  color: var(--text-color); /* Consistent text color */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  padding: 20px;
+  max-width: 300px; /* Fixed width for the sidebar */
+  margin: 20px;
+  font-family: "DynaPuff", Arial, sans-serif; /* Match font style */
+}
+
+.leaderboard-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: var(--accent-color); /* Highlight the title with an accent color */
+  text-align: center;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leader-list {
+  background: var(--background-color); /* Ensure contrast with container */
+  border: 2px solid var(--accent-color); /* Accent for differentiation */
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.leader-list:hover {
+  background-color: var(--hover-color); /* Highlight on hover */
+  transform: scale(1.02);
+}  
+
+.leaderboard-table th,
+.leaderboard-table td {
+  text-align: left;
+  padding: 10px;
+  color: var(--light-text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .leader-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
