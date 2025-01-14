@@ -1,0 +1,48 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
+
+type Game @model {
+  id: ID!
+  name: String!
+  creator: String!
+  players: [Player] @hasMany
+  cards: [Card] @hasMany(fields: ["id"])  # This allows cards to be associated with the game based on their IDs
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type Player @model {
+  id: ID!
+  username: String
+  gameID: ID
+  game: Game @belongsTo(fields: ["gameID"])
+  submissions: [Submission] @hasMany
+  points: Int
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type Card @model {
+  id: ID!
+  content: String!
+  category: String!
+  gameID: ID!  # This field associates the card with a specific game
+  flipped: Boolean!
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+
+  game: Game @belongsTo(fields: ["gameID"]) # Establishes a relationship back to the Game
+}
+
+type Submission @model {
+  id: ID!
+  gameID: ID!
+  playerID: ID!
+  player: Player @belongsTo(fields: ["playerID"])
+  audioKey: String!
+  drawingKey: String
+  transcript: String
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
