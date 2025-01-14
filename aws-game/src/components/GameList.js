@@ -204,23 +204,23 @@ const fetchCardDataAndSetThemes = async (gameId) => {
         </div>
         <ul style={{ listStyle: "none", padding: 0 }}>
           {games.length > 0 ? (
-            games.map((game) => (
-              <li key={game.id} className="record-section">
-                <span>
-                  <strong>{game.name}</strong> (Created by: {game.creator})
-                </span>
-                <button
-                  onClick={() => joinGame(game.id, game.name)}
-                  className="game-button"
-                  disabled={loading}
-                >
-                  Join
-                </button>
-              </li>
-            ))
-          ) : (
-            <p>No games available. Create one to get started!</p>
-          )}
+            games.map((game) => (
+                <li key={game.id} className="record-section">
+                <span className="game-name">
+                    <strong>{game.name}</strong> (Created by: {game.creator})
+                </span>
+                <button
+                    onClick={() => joinGame(game.id, game.name)}
+                    className="game-button"
+                    disabled={loading}
+                >
+                    Join
+                </button>
+                </li>
+            ))
+            ) : (
+            <p>No games available. Create one to get started!</p>
+            )}
         </ul>
       </div>
     </main>

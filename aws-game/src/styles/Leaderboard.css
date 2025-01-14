@@ -1,57 +1,73 @@
 .leaderboard-container {
-  background-color: var(--secondary-color); /* Matches the secondary color */
-  color: var(--text-color); /* Consistent text color */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  background: var(--purple-bg);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 20px var(--accent-glow);
   padding: 20px;
-  max-width: 300px; /* Fixed width for the sidebar */
-  margin: 20px;
-  font-family: "DynaPuff", Arial, sans-serif; /* Match font style */
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: 1px solid var(--accent-border);
+  backdrop-filter: blur(5px);
 }
 
 .leaderboard-title {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
-  margin-bottom: 15px;
-  color: var(--accent-color); /* Highlight the title with an accent color */
+  margin-bottom: 20px;
+  color: var(--accent-border);
   text-align: center;
+  text-shadow: 0 0 10px var(--accent-glow);
 }
 
 .leaderboard-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0 10px;
 }
 
 .leader-list {
-  background: var(--background-color); /* Ensure contrast with container */
-  border: 2px solid var(--accent-color); /* Accent for differentiation */
+  background: var(--purple-dark);
+  border: 1px solid var(--accent-border);
   border-radius: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  margin: 10px 0;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.leader-list td {
+  padding: 15px;
+  text-align: center;
+}
+
+.leader-list td:first-child {
+  width: 50px;
+  font-weight: bold;
+  color: var(--accent-border);
+  border-radius: 8px 0 0 8px;
+}
+
+.leader-list td:nth-child(2) {
+  text-align: left;
+  font-size: 1.1em;
+}
+
+.leader-list td:last-child {
+  width: 80px;
+  font-weight: bold;
+  color: var(--accent-border);
+  border-radius: 0 8px 8px 0;
 }
 
 .leader-list:hover {
-  background-color: var(--hover-color); /* Highlight on hover */
+  background: var(--purple-hover);
   transform: scale(1.02);
-}  
-
-.leaderboard-table th,
-.leaderboard-table td {
-  text-align: left;
-  padding: 10px;
-  color: var(--light-text-color);
+  box-shadow: 0 0 15px var(--accent-glow);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-
-  .leader-list {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+  .leaderboard-container {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
   }
 }

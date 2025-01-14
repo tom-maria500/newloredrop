@@ -1,3 +1,4 @@
+/* drawing-canvas.css */
 .drawing-canvas-container {
   display: flex;
   flex-direction: column;
@@ -8,7 +9,7 @@
 .canvas-controls {
   margin-top: 15px;
   width: 100%;
-  max-width: 800px; /* Match canvas width */
+  max-width: 800px;
 }
 
 .color-buttons {
@@ -22,13 +23,15 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: none;
+  border: 2px solid var(--accent-border);
   cursor: pointer;
   transition: transform 0.2s ease;
+  box-shadow: 0 0 5px var(--accent-glow);
 }
 
 .color-circle:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 10px var(--accent-glow);
 }
 
 .control-buttons {
@@ -37,53 +40,27 @@
   gap: 15px;
 }
 
-.control-button-clear {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  background-color: #f02424;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.3s ease;
-}
-
-.control-button-clear:hover {
-  background-color: #ef6464;
-  transform: scale(1.05);
-}  
-
-.control-button-undo {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  background-color: #3287e7;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.3s ease;
-}
-
-.control-button-:hover {
-  background-color: #69a6eb;
-  transform: scale(1.05);
-}  
-
+.control-button-clear,
+.control-button-undo,
 .control-button-submit {
   padding: 10px 20px;
   font-size: 16px;
-  border: none;
+  border: 1px solid var(--accent-border);
   border-radius: 5px;
-  background-color: #4caf50;
+  background: var(--purple-bg);
   color: white;
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 0 10px var(--accent-glow);
 }
 
+.control-button-clear:hover,
+.control-button-undo:hover,
 .control-button-submit:hover {
-  background-color: #45a049;
+  background: var(--purple-hover);
   transform: scale(1.05);
-}  
+  box-shadow: 0 0 15px var(--accent-glow);
+}
 
 .alert-overlay {
   position: fixed;
@@ -91,41 +68,44 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(58, 0, 137, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  backdrop-filter: blur(5px);
 }
 
 .alert-box {
-  background-color: white;
+  background: var(--purple-bg);
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px var(--accent-glow);
   width: 300px;
+  border: 1px solid var(--accent-border);
 }
 
 .alert-box h3 {
   margin: 0;
-  color: #4caf50;
+  color: var(--accent-border);
 }
 
 .alert-box p {
   margin: 10px 0;
-  color: #333;
+  color: white;
 }
 
 .alert-close-button {
-  background-color: #4caf50;
+  background: var(--purple-dark);
   color: white;
-  border: none;
+  border: 1px solid var(--accent-border);
   border-radius: 5px;
   padding: 10px 15px;
   cursor: pointer;
+  box-shadow: 0 0 10px var(--accent-glow);
 }
 
 .alert-close-button:hover {
-  background-color: #45a049;
+  background: var(--purple-hover);
 }

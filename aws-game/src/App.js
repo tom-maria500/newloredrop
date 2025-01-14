@@ -64,21 +64,25 @@ const App = ({ signOut, user }) => {
   return (
     <div>
       <header>
-        <button onClick={signOut}>Sign Out</button>
         <button onClick={backToHome}> Back to Home </button>
       </header>
       <main>
-        {currentScreen === "LandingPage" && (
-          <div className="landing-container">
-            <h1>New Lore Drop</h1>
-            <button className="game-button" onClick={goToGameList}>
-              Start Game
-            </button>
-            <button className="game-button" onClick={goToInstructions}>
-              Instructions
-            </button>
-          </div>
-        )}
+      {currentScreen === "LandingPage" && (
+      <div className="landing-container">
+        <h1>new lore drop</h1>
+        <div className="button-container">
+          <button className="menu-button" onClick={goToGameList}>
+            new game
+          </button>
+          <button className="menu-button" onClick={goToInstructions}>
+            instructions
+          </button>
+          <button className="menu-button" onClick={signOut}>
+            sign out
+          </button>
+        </div>
+      </div>
+)}
         {currentScreen === "GameList" && (
           <GameList
             username={username} // Pass the user's username to GameList

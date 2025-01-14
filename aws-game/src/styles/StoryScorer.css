@@ -1,113 +1,109 @@
-/* Modal Overlay */
+/* story-scorer.css */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
-  
-  /* Modal Container */
-  .modal {
-    background-color: var(--secondary-color);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-    width: 90%;
-    max-width: 600px;
-    max-height: 80%;
-    overflow-y: auto;
-    position: relative;
-  }
-  
-  /* Modal Title */
-  .story-scorer-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  /* Close Button */
-  .close-modal-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #bf0d00;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    padding: 8px 12px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  .close-modal-button:hover {
-    background-color: #d32f2f;
-  }
-  
-  /* Score Buttons */
-  .score-button {
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    background: var(--accent-color);
-    color: #ffffff;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    margin: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .score-button:hover {
-    background: var(--hover-color);
-    transform: scale(1.1);
-  }
-  
-  .score-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  /* Scores Container */
-  .scores-container {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    padding: 15px;
-    margin-top: 20px;
-    border: 1px solid #ddd;
-  }
-  
-  .scores-container h3 {
-    font-size: 18px;
-    font-weight: bold;
-    color: #555;
-    margin-bottom: 10px;
-  }
-  
-  .scores-container p {
-    margin: 5px 0;
-    font-size: 14px;
-    color: #333;
-  }
-  
-  .scores-container strong {
-    color: #000;
-  }
-  
-  /* Error or Loading Text */
-  p {
-    font-size: 14px;
-    color: #666;
-    text-align: center;
-    margin-top: 10px;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(58, 0, 137, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  background: var(--purple-bg);
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80%;
+  overflow-y: auto;
+  position: relative;
+  border: 1px solid var(--accent-border);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.story-scorer-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--accent-border);
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 0 0 10px var(--accent-glow);
+}
+
+.close-modal-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--purple-dark);
+  color: white;
+  border: 1px solid var(--accent-border);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.close-modal-button:hover {
+  background: var(--purple-hover);
+}
+
+.score-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  background: var(--purple-bg);
+  color: white;
+  border: 1px solid var(--accent-border);
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.score-button:hover {
+  background: var(--purple-hover);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.score-button:disabled {
+  background: rgba(58, 0, 137, 0.2);
+  border-color: rgba(161, 128, 233, 0.3);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.scores-container {
+  background: var(--purple-bg);
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+  border: 1px solid var(--accent-border);
+  box-shadow: 0 0 10px var(--accent-glow);
+  color: white;
+}
+
+.scores-container h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--accent-border);
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px var(--accent-glow);
+}
+
+.scores-container p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: white;
+}
+
+.scores-container strong {
+  color: var(--accent-border);
+}
