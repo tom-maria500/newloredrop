@@ -43,6 +43,16 @@ const GameList = ({ username, openGameBoard }) => {
     return () => subscription.unsubscribe();
   }, []);
 
+    const fetchGames = async () => {
+        try {
+            const gameData = await client.graphql({ query: listGames });
+            setGames(gameData.data.listGames.items);
+        } catch (error) {
+            console.error("Error fetching games:", error);
+            setError("Failed to load games.");
+        }
+    };
+
   const createGame = async () => {
     if (!newGameName.trim()) {
         alert("Please enter a game name.");
@@ -106,6 +116,9 @@ const GameList = ({ username, openGameBoard }) => {
                 },
             })
         ));
+
+    await fetchGames(); // Fetch the updated list of games
+    setNewGameName(""); // Clear the input field
     } catch (error) {
         console.error("Error creating game:", error);
         setError("Failed to create game.");
