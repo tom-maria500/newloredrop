@@ -6,8 +6,10 @@ import "../styles/StoryScorer.css";
 
 const client = generateClient();
 
+const apiKey = process.env.REACT_APP_API_KEY;
+
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey: apiKey,
   dangerouslyAllowBrowser: true,
 });
 

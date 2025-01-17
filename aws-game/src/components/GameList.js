@@ -219,7 +219,7 @@ const fetchCardDataAndSetThemes = async (gameId) => {
                 </li>
             ))
             ) : (
-            <p>No games available. Create one to get started!</p>
+            <p style={{ color: 'white' }}>No games available. Create one to get started!</p>
             )}
         </ul>
       </div>
